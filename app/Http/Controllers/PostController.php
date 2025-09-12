@@ -8,7 +8,10 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index() {
-        $post = Post::find(1);
-        dd($post);
+        $posts = Post::all();
+        foreach ($posts as $post) {
+            dump($post->title);
+        }
+        dd('end');
     }
 };
