@@ -27,3 +27,6 @@ Route::get('/hello', function() {
 Route::get('/my_super_new_controller', 'MySuperNewController@index');
 
 Route::get('/posts', 'PostController@index');
+
+Route::get('/posts/create', 'PostController@create');
+
