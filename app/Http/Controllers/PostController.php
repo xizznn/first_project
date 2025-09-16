@@ -50,8 +50,10 @@ class PostController extends Controller
     }
 
     public function delete() {
-        $post = Post::withTrashed()->find(2);
-        $post->restore();
+        // $post = Post::withTrashed()->find(1);
+        // $post->restore();
+        $post = Post::find(1);
+        $post->delete();
         dd('deleted');
     }
 
