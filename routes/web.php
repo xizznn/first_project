@@ -26,7 +26,7 @@ Route::get('/hello', function() {
 
 Route::get('/my_super_new_controller', 'MySuperNewController@index');
 
-Route::get('/posts', 'PostController@index');
+Route::get('/posts', 'PostController@index')->name('post.index');
 
 Route::get('/posts/create', 'PostController@create');
 
@@ -37,3 +37,7 @@ Route::get('posts/delete', 'PostController@delete');
 Route::get('posts/first_or_create', 'PostController@firstOrCreate');
 
 Route::get('posts/update_or_create', 'PostController@updateOrCreate');
+
+Route::get('/main', 'MainController@index')->name('main.index');
+Route::get('/contacts', 'ContactsController@index')->name('contacts.index');
+Route::get('/about', 'AboutController@index')->name('about.index');

@@ -2,6 +2,6 @@
 @section('content')
 
     <div>
-        This is post page
+        This is contact page
     </div>
 @endsection
