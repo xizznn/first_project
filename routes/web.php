@@ -39,5 +39,5 @@ Route::get('posts/first_or_create', 'PostController@firstOrCreate');
 Route::get('posts/update_or_create', 'PostController@updateOrCreate');
 
 Route::get('/main', 'MainController@index')->name('main.index');
-Route::get('/contacts', 'ContactsController@index')->name('contacts.index');
+Route::get('/contacts', 'ContactsController@index')->name('contact.index');
 Route::get('/about', 'AboutController@index')->name('about.index');
