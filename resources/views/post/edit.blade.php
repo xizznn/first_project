@@ -11,11 +11,11 @@
     </div>
     <div class="form-group mb-3">
       <label for="content">content</label>
-      <textarea class="form-control" name="content" id="content" placeholder="content">{{ $post->title }}</textarea>
+      <textarea class="form-control" name="content" id="content" placeholder="content">{{ $post->content }}</textarea>
     </div>
     <div class="form-group mb-3">
       <label for="image">image</label>
-      <input type="text" class="form-control" name="image" id="image" placeholder="image" value="{{ $post->title }}">
+      <input type="text" class="form-control" name="image" id="image" placeholder="image" value="{{ $post->image }}">
     </div>
     <div class="form-group mb-3">
       <label for="exampleFormControlSelect1">category</label>
@@ -40,7 +40,7 @@
         @endforeach
       </select>
     </div>
-    <button type=" submit" class="btn btn-primary">Обновить</button>
+    <button type="submit" class="btn btn-primary">Обновить</button>
   </form>
 </div>
 @endsection
