@@ -24,6 +24,14 @@
         @endforeach
       </select>
     </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">tags</label>
+      <select multiple class="form-control" id="exampleFormControlSelect2" name="tags[]">
+        @foreach ($tags as $tag)
+        <option value="{{ $tag->id }}">{{ $tag->title }}</option>
+        @endforeach
+      </select>
+    </div>
     <button type="submit" class="btn btn-primary">Создать</button>
   </form>
 </div>
