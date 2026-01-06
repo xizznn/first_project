@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -11,9 +12,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
-
-        return view('post.index', compact('posts'));
+        $category = Category::find(1);
+        $post = Post::find(1);
+        dd($post->category);
     }
 
 
@@ -63,7 +64,8 @@ class PostController extends Controller
         dd('deleted');
     }
 
-    public function destroy(Post $post) {
+    public function destroy(Post $post)
+    {
         $post->delete();
         return redirect()->route('post.index');
     }
