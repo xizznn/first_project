@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/my_page', 'MyPlaceController@index');
 
-Route::get('/hello', function() {
+Route::get('/hello', function () {
     return 'hello';
 });
 
@@ -28,7 +28,14 @@ Route::get('/my_super_new_controller', 'MySuperNewController@index');
 
 Route::get('/posts', 'PostController@index')->name('post.index');
 
-Route::get('/posts/create', 'PostController@create');
+Route::get('/posts/create', 'PostController@create')->name('post.create');
+
+Route::post('/posts', 'PostController@store')->name('post.store');
+
+Route::get('/posts/{post}', 'PostController@show')->name('post.show');
+Route::get('/posts/{post}/edit', 'PostController@edit')->name('post.edit');
+Route::patch('/posts/{post}', 'PostController@update')->name('post.update');
+Route::delete('/posts/{post}', 'PostController@destroy')->name('post.delete');
 
 Route::get('posts/update', 'PostController@update');
 
