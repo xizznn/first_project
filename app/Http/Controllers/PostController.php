@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
 
 use function Ramsey\Uuid\v1;
 
@@ -12,9 +13,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $category = Category::find(1);
         $post = Post::find(1);
-        dd($post->category);
+        $tag = Tag::find(1);
+        dd($post->tags);
     }
 
 
