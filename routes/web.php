@@ -14,9 +14,9 @@ use function PHPUnit\Framework\returnArgument;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', 'HomeController@index');
 
 Route::get('/my_page', 'MyPlaceController@index');
 
